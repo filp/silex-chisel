@@ -18,7 +18,7 @@ class ChiselApplication extends Application
     /**
      * {@inheritDoc}
      */
-    public function __construct($name = 'chisel', $version = '')
+    public function __construct($name = 'chisel', $version = ':)')
     {
         parent::__construct($name, $version);
     }
