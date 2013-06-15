@@ -33,19 +33,20 @@ class ChiselApplication extends Application
     }
 
     /**
-     * Decorate's the base class's doRunCommand method to inject
-     * the application object on demand, for Chisel\Console\Command
-     * class instances.
+     * Decorate's the base class's add method to inject the application
+     * object for Chisel\Console\Command instances.
      * 
      * {@inheritDoc}
      */
-    protected function doRunCommand(BaseCommand $command, InputInterface $input, OutputInterface $output)
+    public function add(BaseCommand $command)
     {
-        if(is_subclass_of($command, "Chisel\\Console\\Command")) {
+        parent::add($command);
+
+        if(is_subclass_of($command, "Chisel\\Console\\Command") && $command->isEnabled()) {
             $command->setApp($this->app);
         }
 
-        return parent::doRunCommand($command, $input, $output);
+        return $command;
     }
 
     /**

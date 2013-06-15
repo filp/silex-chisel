@@ -1,0 +1,30 @@
+{{ "<?php" }}
+
+use Chisel\Console\Command;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Output\OutputInterface;
+
+class {{ command_name }} extends Command
+{
+    /**
+     * Configure your command here.
+     */
+    protected function configure()
+    {
+        $this
+            ->setName("app:{{ command_short_name }}")
+            ->setDescription("Description for {{ command_name }}")
+        ;
+    }
+
+    /**
+     * Execute your command's logic here.
+     */
+    protected function execute(InputInterface $input, OutputInterface $output)
+    {
+        $output->writeln("<error>Not implemented :(</error>");
+        return 1;
+    }
+}
