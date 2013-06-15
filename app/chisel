@@ -9,7 +9,11 @@
 require __DIR__ . "/../vendor/autoload.php";
 
 use Chisel\Console\ChiselApplication;
+use Chisel\Console\Command\GeneratorCommand;
+use Silex\Application;
 
-$chisel = new ChiselApplication;
+$app    = new Silex\Application;
+$chisel = new ChiselApplication($app);
 $chisel->addFromDirectory(__DIR__ . "/commands");
+$chisel->add(new GeneratorCommand);
 $chisel->run();

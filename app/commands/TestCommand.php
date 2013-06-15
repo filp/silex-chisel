@@ -1,6 +1,6 @@
 <?php
 
-use Symfony\Component\Console\Command\Command;
+use Chisel\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
