@@ -130,7 +130,7 @@ class GeneratorCommand extends Command
                     $answer = strtolower($answer);
 
                     if(!in_array($answer, array("y", "n"))) {
-                        throw new InvalidArgumentException(
+                        throw new RuntimeException(
                             "Please answer Y(yes) or N(no"
                         );
                     }
