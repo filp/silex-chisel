@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+/**
+ * silex-chisel
+ * 
+ * @author  Filipe Dobreira <https://github.com/filp>
+ * @license MIT
+ */
+require __DIR__ . "/../vendor/autoload.php";
+
+use Chisel\Console\ChiselApplication;
+
+$chisel = new ChiselApplication;
+$chisel->addFromDirectory(__DIR__ . "/commands");
+$chisel->run();
