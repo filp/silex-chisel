@@ -1,0 +1,13 @@
+{
+  "name": "filp/chisel",
+  "description": "Speed-up your Silex projects with this opinionated bootstrapper",
+  "keywords": ["silex", "rapid", "chisel"],
+  "license": "MIT",
+  "require": {
+    "silex/silex": "1.0.*@dev",
+    "symfony/yaml": "2.3.0",
+    
+    "twig/twig": ">=1.8,<2.0-dev",
+    "symfony/twig-bridge": "~2.3"
+  }
+}
