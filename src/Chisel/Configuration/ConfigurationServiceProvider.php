@@ -26,7 +26,7 @@ class ConfigurationServiceProvider implements ServiceProviderInterface
         // files, loads them in order and reads them as YAML, performing
         // merges as needed, and caching the results if possible.
         // @todo Caching
-        $app["chisel.config"] = $app->share(function() use($app) {
+        $app["config"] = $app["chisel.config"] = $app->share(function() use($app) {
             $files  = (array) $app["chisel.config.files"];
             $config = array();
             foreach($files as $file) {

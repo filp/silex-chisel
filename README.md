@@ -10,7 +10,36 @@ an opinionated accelerator skeleton for Silex projects
 - Even faster-er development with chisel **generators** (generate stubs for tests, commands, etc)
 - Other stuff I haven't written about yet. `@TODO`
 
-### `chisel` utility
+### YAML configuration
+
+Chisel adds support for YAML configuration files for your project, through the `Chisel\Configuration\ConfigurationServiceProvider`, which you may configure in your `bootstrap.php` file:
+
+```php
+$app->register(new Chisel\Configuration\ConfigurationServiceProvider,
+    array(
+        // We only check that a configuration file exists
+        // if we're in debug mode:
+        "chisel.config.check_exists"   => $app["debug"],
+        "chisel.config.ignore_missing" => true,
+
+        "chisel.config.files" => array(
+            $app["path.config"] . "/app.example.yml",
+            $app["path.config"] . "/app_{$app['env']}.yml"
+        )
+    )
+);
+```
+
+By default, Chisel will look for an `app.yml` and `app_{environment}.yml` file in your `app/config` folder, read them in as YAML, merge them all together in the order they're declared, and expose them as a single array through the `config` service:
+
+```php
+$app->get("/", function() use($app) {
+    return "I like " . $app["config"]["thing_i_like"] . "!";
+        #=> I like turnip!
+});
+```
+
+### Command-line utility: `chisel`
 
 Chisel comes with a handy CLI tool for your every-day project management needs.
 
