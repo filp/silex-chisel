@@ -5,7 +5,7 @@ an opinionated accelerator skeleton for Silex projects
 
 
 - Sensible default setup that lets your project grow, and still feels like Silex 
-- Environment-aware YAML configuration files
+- YAML configuration files, with caching support
 - `chisel` command-line tool with drop-in support for custom commands (`symfony/console`)
 - Even faster-er development with chisel **generators** (generate stubs for tests, commands, etc)
 - Other stuff I haven't written about yet. `@TODO`
