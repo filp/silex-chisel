@@ -3,4 +3,7 @@ vendor/*
 app/cache/*
 !app/cache/.keep
 
+app/config/*
+!app/config/*example.yml
+
 phpunit.xml
