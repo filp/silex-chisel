@@ -28,6 +28,7 @@ abstract class WebTestCase extends BaseWebTestCase
     {
         $app = require __DIR__ . "/../../app/bootstrap.php";
         $app["debug"] = true;
+        $app["env"]   = "test";
         $app["exception_handler"]->disable();
 
         return $app;
