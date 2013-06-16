@@ -1,10 +1,8 @@
-<span style="color:rgba(0, 0, 0, .4)">silex-</span>chisel
-====
-
+# chisel
 an opinionated accelerator skeleton for Silex projects
 
-Features
----
+### Features
+
 
 - Sensible default setup that lets your project grow, and still feels like Silex 
 - Environment-aware YAML configuration files
@@ -12,8 +10,7 @@ Features
 - Even faster-er development with chisel **generators** (generate stubs for tests, commands, etc)
 - Other stuff I haven't written about yet. `@TODO`
 
-`chisel` utility
----
+### `chisel` utility
 
 Chisel comes with a handy CLI tool for your every-day project management needs.
 
@@ -25,8 +22,8 @@ It includes various chisel-specific commands for working with things such as cac
 
 ```shell
 $ php app/chisel chisel:generate command  
-What do you want to name the new command? (MUST end with 'Command'): MyCoolCommand  
-write /home/filp/dev/silex-chisel/app/commands/MyCoolCommand.php
+ What do you want to name the new command? (MUST end with 'Command'): MyCoolCommand  
+ write /home/filp/dev/silex-chisel/app/commands/MyCoolCommand.php
 ```
 
 Your newly generated file, `MyCoolCommand.php`, now looks like this:
