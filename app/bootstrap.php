@@ -40,6 +40,9 @@ return call_user_func(function() {
         )
     );
 
+    $app->register(new Chisel\Cache\CacheServiceProvider);
+    $app["cache"];
+
     // Register base service providers:
     $app->register(new Silex\Provider\TwigServiceProvider,
         array(

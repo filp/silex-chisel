@@ -7,6 +7,7 @@
   "require": {
     "silex/silex": "1.*@stable",
     "symfony/yaml": "2.3.*",
+    "tedivm/stash": ">=v0.10.3",
     
     "symfony/console": "2.3.*",
 
